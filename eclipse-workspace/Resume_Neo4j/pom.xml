@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Group5</groupId>
-	<artifactId>Resume_Neo4j</artifactId>
+	<artifactId>Project-Neo4j</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Resume_Neo4j Maven Webapp</name>
+	<name>Project-Neo4j Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -33,7 +33,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>Resume_Neo4j</finalName>
+		<finalName>Project-Neo4j</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>

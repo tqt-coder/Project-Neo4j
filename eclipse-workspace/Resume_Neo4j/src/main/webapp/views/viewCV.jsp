@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -8,25 +9,35 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Website CV</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'" />
+<link rel="preconnect" href="https://fonts.gstatic.com"
+	crossorigin="crossorigin" />
+<link rel="preload" as="style"
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+	media="print" onload="this.media='all'" />
 <noscript>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
 </noscript>
-<link href="<c:url value="/assets/css/font-awesome/css/all.min.css?ver=1.2.1" />" rel="stylesheet">
-<link href="<c:url value="/assets/css/mdb.min.css?ver=1.2.1" />" rel="stylesheet">
-<link href="<c:url value="/assets/css/aos.css?ver=1.2.1" />" rel="stylesheet">
-<link href="<c:url value="/assets/css/main.css?ver=1.2.1" />" rel="stylesheet">
+<link
+	href="<c:url value="/assets/css/font-awesome/css/all.min.css?ver=1.2.1" />"
+	rel="stylesheet">
+<link href="<c:url value="/assets/css/mdb.min.css?ver=1.2.1" />"
+	rel="stylesheet">
+<link href="<c:url value="/assets/css/aos.css?ver=1.2.1" />"
+	rel="stylesheet">
+<link href="<c:url value="/assets/css/main.css?ver=1.2.1" />"
+	rel="stylesheet">
 
 
 <noscript>
 	<style type="text/css">
-		[data-aos] {
-			opacity: 1 !important;
-			transform: translate(0) scale(1) !important;
-		}
-	</style>
+[data-aos] {
+	opacity: 1 !important;
+	transform: translate(0) scale(1) !important;
+}
+</style>
 </noscript>
 </head>
 
@@ -49,9 +60,6 @@
 								title="Education"><span class="menu-title">Education</span></a>
 							</li>
 
-							<li class="nav-item"><a class="nav-link" href="#references"
-								title="References"><span class="menu-title">References</span></a>
-							</li>
 
 						</ul>
 					</nav>
@@ -71,7 +79,8 @@
 								<div class="text-center p-5">
 									<div class="avatar p-1">
 										<img class="img-thumbnail shadow-2-strong"
-											src="<c:url value="/assets/images/avatar.jpg" />" width="160" height="160" />
+											src="<c:url value="/assets/images/avatar.jpg" />" width="160"
+											height="160" />
 									</div>
 									<div class="header-bio mt-3">
 										<div data-aos="zoom-in" data-aos-delay="0">
@@ -81,8 +90,8 @@
 
 										<div class="d-print-none">
 											<a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3"
-												href="<c:url value="/assets/css/material-resume.pdf"/>" data-aos="fade-right"
-												data-aos-delay="700">Download CV</a>
+												href="<c:url value="/assets/css/material-resume.pdf"/>"
+												data-aos="fade-right" data-aos-delay="700">Download CV</a>
 
 										</div>
 									</div>
@@ -355,59 +364,17 @@
 						</div>
 					</div>
 
-					<div class="shadow-1-strong bg-white my-5 p-5" id="references">
-						<div class="reference-section">
-							<h2 class="h2 fw-light mb-4">References</h2>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="d-flex mb-2">
-										<div class="avatar">
-											<img src="<c:url value="/assets/images/reference-image-1.jpg"/>" width="60"
-												height="60" />
-										</div>
-										<div class="header-bio m-3 mb-0">
-											<h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">Aiyana</h3>
-											<p class="text-muted text-small" data-aos="fade-left"
-												data-aos-delay="100">CEO / Web Design Company</p>
-										</div>
-									</div>
-									<div class="d-flex">
-										<i class="text-secondary fas fa-quote-left"></i>
-										<p class="lead mx-2" data-aos="fade-left" data-aos-delay="100">Walter
-											displays exemplary professionalism and is able to take on
-											challenges. He learns quickly and is an asset to any team.</p>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="d-flex mb-2">
-										<div class="avatar">
-											<img src="<c:url value="/assets/images/reference-image-2.jpg" />" width="60"
-												height="60" />
-										</div>
-										<div class="header-bio m-3 mb-0">
-											<h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">Alexander</h3>
-											<p class="text-muted text-small" data-aos="fade-left"
-												data-aos-delay="100">Front-end Developer / Web Design
-												Company</p>
-										</div>
-									</div>
-									<div class="d-flex">
-										<i class="text-secondary fas fa-quote-left"></i>
-										<p class="lead mx-2" data-aos="fade-left" data-aos-delay="100">Walter
-											is a great co-worker and problem solver. He is quick to
-											extend his helping hand and makes a good team player.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+
 
 				</div>
 			</div>
-		</div>
-<script type="text/javascript" src="<c:url value="/assets/js/mdb.min.js?ver=1.2.1"/>"></script>
-<script type="text/javascript" src="<c:url value="/assets/js/aos.js?ver=1.2.1"/>"></script>
-<script type="text/javascript" src="<c:url value="/assets/js/main.js?ver=1.2.1"/>"></script>	
+			<script type="text/javascript"
+				src="<c:url value="/assets/js/mdb.min.js?ver=1.2.1"/>"></script>
+			<script type="text/javascript"
+				src="<c:url value="/assets/js/aos.js?ver=1.2.1"/>"></script>
+			<script type="text/javascript"
+				src="<c:url value="/assets/js/main.js?ver=1.2.1"/>"></script>
 </body>
 
 </html>
