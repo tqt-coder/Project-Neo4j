@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Website CV</title>
 <link rel="preconnect" href="https://fonts.gstatic.com"
 	crossorigin="crossorigin" />
@@ -45,7 +46,7 @@
 	<header class="d-print-none">
 		<div class="container text-center text-lg-left">
 			<div class="pt-4 clearfix">
-				<h1 class="site-title mb-0">Walter Patterson</h1>
+				<h1 class="site-title mb-0"><c:out value="${bgb.firstname}" /></h1>
 				<div class="site-nav">
 					<nav role="navigation">
 						<ul class="nav justify-content-center">
@@ -79,13 +80,13 @@
 								<div class="text-center p-5">
 									<div class="avatar p-1">
 										<img class="img-thumbnail shadow-2-strong"
-											src="<c:url value="/assets/images/avatar.jpg" />" width="160"
+											src="/Resume_Neo4j/assets/images/<c:out value="${bgb.image}" />" width="160"
 											height="160" />
 									</div>
 									<div class="header-bio mt-3">
 										<div data-aos="zoom-in" data-aos-delay="0">
-											<h2 class="h1">Walter Patterson</h2>
-											<p>Front-end Developer and Graphic Designer</p>
+											<h2 class="h1"><c:out value="${bgb.firstname}" /> <c:out value="${bgb.lastname}" /></h2>
+											<p><c:out value="${bgb.major}" /></p>
 										</div>
 
 										<div class="d-print-none">
@@ -105,14 +106,9 @@
 								<div class="col-md-6">
 									<h2 class="h2 fw-light mb-4">About Me</h2>
 									<p>
-										Hello! I’m Walter Patterson. I am passionate about UI/UX
-										design and Web Design. I am a skilled <strong>front-end
-											developer</strong> and master of graphic design tools such as
-										Photoshop and Sketch. I am a quick learner and a team worker
-										that gets the job done.
+										<c:out value="${bgb.self_decription}" />
 									</p>
-									<p>I can easily capitalize on low hanging fruits and
-										quickly maximize timely deliverables for real-time schemas.</p>
+									
 								</div>
 								<div class="col-md-5 offset-lg-1">
 									<div class="row mt-2">
@@ -124,7 +120,7 @@
 											</div>
 										</div>
 										<div class="col-sm-7">
-											<div class="pb-2">28</div>
+											<div class="pb-2"><c:out value="${bgb.age}" /></div>
 										</div>
 										<div class="col-sm-5">
 											<div class="pb-2 fw-bolder">
@@ -133,7 +129,7 @@
 											</div>
 										</div>
 										<div class="col-sm-7">
-											<div class="pb-2">walter@company.com</div>
+											<div class="pb-2"><c:out value="${bgb.email}" /></div>
 										</div>
 										<div class="col-sm-5">
 											<div class="pb-2 fw-bolder">
@@ -142,7 +138,7 @@
 											</div>
 										</div>
 										<div class="col-sm-7">
-											<div class="pb-2">username@skype.com</div>
+											<div class="pb-2"><c:out value="${bgb.skype}" /></div>
 										</div>
 										<div class="col-sm-5">
 											<div class="pb-2 fw-bolder">
@@ -151,7 +147,7 @@
 											</div>
 										</div>
 										<div class="col-sm-7">
-											<div class="pb-2">+0718-111-0011</div>
+											<div class="pb-2"><c:out value="${bgb.phonenumber}" /></div>
 										</div>
 										<div class="col-sm-5">
 											<div class="pb-2 fw-bolder">
@@ -160,7 +156,7 @@
 											</div>
 										</div>
 										<div class="col-sm-7">
-											<div class="pb-2">131 W, City Center, New York, U.S.A</div>
+											<div class="pb-2"><c:out value="${bgb.address}" /></div>
 										</div>
 									</div>
 								</div>
@@ -172,194 +168,82 @@
 							<h2 class="h2 fw-light mb-4">Professional Skills</h2>
 							<div class="row">
 								<div class="col-md-6">
+									
 									<div class="mb-3">
-										<span class="fw-bolder">HTML</span>
-										<div class="progress my-2 rounded" style="height: 20px">
-											<div class="progress-bar bg-info" role="progressbar"
-												data-aos="zoom-in-right" data-aos-delay="100"
-												data-aos-anchor=".skills-section" style="width: 95%;"
-												aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Master</div>
-										</div>
-									</div>
-									<div class="mb-3">
-										<span class="fw-bolder">CSS</span>
+										<span class="fw-bolder"><c:out value="${userSkill.it}" /></span>
 										<div class="progress my-2 rounded" style="height: 20px">
 											<div class="progress-bar bg-info" role="progressbar"
 												data-aos="zoom-in-right" data-aos-delay="200"
-												data-aos-anchor=".skills-section" style="width: 15%"
+												data-aos-anchor=".skills-section" style="width: <c:out value="${userSkill.itValue}" />%"
 												aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Expert</div>
 										</div>
 									</div>
 									<div class="mb-3">
-										<span class="fw-bolder">JavaScript</span>
+										<span class="fw-bolder"><c:out value="${userSkill.language}" /></span>
 										<div class="progress my-2 rounded" style="height: 20px">
 											<div class="progress-bar bg-info" role="progressbar"
 												data-aos="zoom-in-right" data-aos-delay="300"
-												data-aos-anchor=".skills-section" style="width: 75%"
+												data-aos-anchor=".skills-section" style="width: <c:out value="${userSkill.languageValue}" />%"
 												aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
 										</div>
 									</div>
 									<div class="mb-3">
-										<span class="fw-bolder">WordPress</span>
-										<div class="progress my-2 rounded" style="height: 20px">
-											<div class="progress-bar bg-info" role="progressbar"
-												data-aos="zoom-in-right" data-aos-delay="300"
-												data-aos-anchor=".skills-section" style="width: 75%"
-												aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="mb-3">
-										<span class="fw-bolder">Adobe Photoshop</span>
+										<span class="fw-bolder"><c:out value="${userSkill.wordGroup}" /></span>
 										<div class="progress my-2 rounded" style="height: 20px">
 											<div class="progress-bar bg-secondary" role="progressbar"
 												data-aos="zoom-in-right" data-aos-delay="400"
-												data-aos-anchor=".skills-section" style="width: 95%"
+												data-aos-anchor=".skills-section" style="width: <c:out value="${userSkill.wordGroupValue}" />%"
 												aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Master</div>
 										</div>
 									</div>
-									<div class="mb-3">
-										<span class="fw-bolder">Adobe Illustrator</span>
-										<div class="progress my-2 rounded" style="height: 20px">
-											<div class="progress-bar bg-secondary" role="progressbar"
-												data-aos="zoom-in-right" data-aos-delay="400"
-												data-aos-anchor=".skills-section" style="width: 90%"
-												aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Expert</div>
-										</div>
-									</div>
-									<div class="mb-3">
-										<span class="fw-bolder">Sketch</span>
-										<div class="progress my-2 rounded" style="height: 20px">
-											<div class="progress-bar bg-secondary" role="progressbar"
-												data-aos="zoom-in-right" data-aos-delay="500"
-												data-aos-anchor=".skills-section" style="width: 85%"
-												aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Expert</div>
-										</div>
-									</div>
-									<div class="mb-3">
-										<span class="fw-bolder">Adobe XD</span>
-										<div class="progress my-2 rounded" style="height: 20px">
-											<div class="progress-bar bg-secondary" role="progressbar"
-												data-aos="zoom-in-right" data-aos-delay="600"
-												data-aos-anchor=".skills-section" style="width: 75%"
-												aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Beginner</div>
-										</div>
-									</div>
 								</div>
-							</div>
+								
 						</div>
 					</div>
 					<div class="shadow-1-strong bg-white my-5 p-5" id="experience">
 						<div class="work-experience-section">
 							<h2 class="h2 fw-light mb-4">Work Experience</h2>
 							<div class="timeline">
+							<c:forEach items="${lex}" var="row">
+						
 								<div class="timeline-card timeline-card-info" data-aos="fade-in"
 									data-aos-delay="0">
 									<div class="timeline-head px-4 pt-3">
 										<div class="h5">
-											Frontend Developer <span class="text-muted h6">at
-												Creative Agency</span>
+											<c:out value="${row.position}" /> <span class="text-muted h6">at
+												<c:out value="${row.company}" /></span>
 										</div>
 									</div>
 									<div class="timeline-body px-4 pb-4">
-										<div class="text-muted text-small mb-3">May, 2015 -
-											Present</div>
-										<div>Leverage agile frameworks to provide a robust
-											synopsis for high level overviews. Iterative approaches to
-											corporate strategy foster collaborative thinking to further
-											the overall value proposition.</div>
+										<div class="text-muted text-small mb-3"><c:out value="${row.pos_startdate}" /> -
+											<c:out value="${row.pos_enddate}" /></div>
+										<div><c:out value="${row.position_decription}" /></div>
 									</div>
 								</div>
-								<div class="timeline-card timeline-card-info" data-aos="fade-in"
-									data-aos-delay="200">
-									<div class="timeline-head px-4 pt-3">
-										<div class="h5">
-											Graphic Designer <span class="text-muted h6">at Design
-												Studio</span>
-										</div>
-									</div>
-									<div class="timeline-body px-4 pb-4">
-										<div class="text-muted text-small mb-3">June, 2013 -
-											May, 2015</div>
-										<div>Override the digital divide with additional
-											clickthroughs from DevOps. Nanotechnology immersion along the
-											information highway will close the loop on focusing solely on
-											the bottom line.</div>
-									</div>
-								</div>
-								<div class="timeline-card timeline-card-info" data-aos="fade-in"
-									data-aos-delay="400">
-									<div class="timeline-head px-4 pt-3">
-										<div class="h5">
-											Junior Web Developer <span class="text-muted h6">at
-												Indie Studio</span>
-										</div>
-									</div>
-									<div class="timeline-body px-4 pb-4">
-										<div class="text-muted text-small mb-3">Jan, 2011 - May,
-											2013</div>
-										<div>User generated content in real-time will have
-											multiple touchpoints for offshoring. Organically grow the
-											holistic world view of disruptive innovation via workplace
-											diversity and empowerment.</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						</c:forEach>
+								
 					</div>
 					<div class="shadow-1-strong bg-white my-5 p-5" id="education">
 						<div class="education-section">
 							<h2 class="h2 fw-light mb-4">Education</h2>
 							<div class="timeline">
+							<c:forEach items="${leb}" var="row">
+							
 								<div class="timeline-card timeline-card-success"
-									data-aos="fade-in" data-aos-delay="0">
+									data-aos="fade-in" data-aos-delay="100">
 									<div class="timeline-head px-4 pt-3">
 										<div class="h5">
-											Masters in Information Technology <span class="text-muted h6">from
-												International University</span>
+											<c:out value="${row.mayjor}" /> <span class="text-muted h6">from
+												<c:out value="${row.university}" /></span>
 										</div>
 									</div>
 									<div class="timeline-body px-4 pb-4">
-										<div class="text-muted text-small mb-3">2011 - 2013</div>
-										<div>Leverage agile frameworks to provide a robust
-											synopsis for high level overviews. Iterative approaches to
-											corporate strategy foster collaborative thinking to further
-											the overall value proposition.</div>
+										<div class="text-muted text-small mb-3"><c:out value="${row.may_startdate}" /> - <c:out value="${row.may_enddate}" /></div>
+										<div><c:out value="${row.mayjor_decription}" /></div>
 									</div>
 								</div>
-								<div class="timeline-card timeline-card-success"
-									data-aos="fade-in" data-aos-delay="200">
-									<div class="timeline-head px-4 pt-3">
-										<div class="h5">
-											Bachelor of Computer Science <span class="text-muted h6">from
-												Regional College</span>
-										</div>
-									</div>
-									<div class="timeline-body px-4 pb-4">
-										<div class="text-muted text-small mb-3">2007 - 2011</div>
-										<div>Override the digital divide with additional
-											clickthroughs from DevOps. Nanotechnology immersion along the
-											information highway will close the loop on focusing solely on
-											the bottom line.</div>
-									</div>
-								</div>
-								<div class="timeline-card timeline-card-success"
-									data-aos="fade-in" data-aos-delay="400">
-									<div class="timeline-head px-4 pt-3">
-										<div class="h5">
-											Science and Mathematics <span class="text-muted h6">from
-												Mt. High Scool</span>
-										</div>
-									</div>
-									<div class="timeline-body px-4 pb-4">
-										<div class="text-muted text-small mb-3">1995 - 2007</div>
-										<div>User generated content in real-time will have
-											multiple touchpoints for offshoring. Organically grow the
-											holistic world view of disruptive innovation via workplace
-											diversity and empowerment.</div>
-									</div>
-								</div>
+							</c:forEach>
+								
 							</div>
 						</div>
 					</div>

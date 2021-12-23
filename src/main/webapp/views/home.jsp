@@ -27,8 +27,8 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Trang chủ</a></li>
-                    <li><a class="nav-link scrollto" href="#about">CV mẫu</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Tạo CV</a></li>
+                    <li><a class="nav-link scrollto" href="/Resume_Neo4j/views/viewCV.jsp">CV mẫu</a></li>
+                    <li><a class="nav-link scrollto" href="/Resume_Neo4j/views/inputCV.jsp">Tạo CV</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -42,6 +42,7 @@
     <section id="hero">
         <div class="hero-container">
             <h3>Welcome to <strong><c:out value="${usergmail}" /></strong></h3>
+           
             <h1>We're Creative Agency</h1>
             <h2>We are team of talented designers making websites with Bootstrap</h2>
             <a href="#about" class="btn-get-started scrollto">Create CV</a>

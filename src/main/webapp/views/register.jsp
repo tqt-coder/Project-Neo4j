@@ -51,7 +51,7 @@
             <div class="py-2">
                 <div class="row py-2">
                     <div class="col-md-12">
-                        <label for="HovaTen">Họ và tên</label>
+                        <label for="HovaTen">Username</label>
                         <input type="text" name="HovaTen" class="bg-light form-control" placeholder="Nhập họ và tên" required>
                     </div>
                 </div>

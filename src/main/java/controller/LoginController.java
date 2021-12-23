@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import bean.UserBean;
 import dao.UserDAO;
@@ -28,7 +29,12 @@ public class LoginController extends HttpServlet{
 		String result = UserDAO.checkPass(user);
 //		System.out.println(result);
 		RequestDispatcher rd ;
+		HttpSession session = req.getSession();
+		session.setAttribute("Ugmail", user.getGmail());
 		if(result != null) {
+			session.setAttribute("Uname", result);
+			
+			req.setAttribute("gmail", user.getGmail());
 			req.setAttribute("usergmail", result);
 			rd = req.getRequestDispatcher("views/home.jsp");
 			rd.forward(req, resp);
